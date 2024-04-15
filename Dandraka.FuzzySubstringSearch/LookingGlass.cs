@@ -59,6 +59,12 @@ public class LookingGlass
                     break;
                 }
             }
+
+            if (r >= sNgramsCount)
+            {
+                // word found, stop looking further
+                break;
+            }
         }
 
         //Console.WriteLine("r = " + r.ToString());
