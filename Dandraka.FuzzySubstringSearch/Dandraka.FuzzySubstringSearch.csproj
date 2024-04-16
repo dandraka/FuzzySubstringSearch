@@ -21,4 +21,9 @@
     <PackageTags>string text search substring fuzzy n-grams ngrams bigrams trigrams</PackageTags>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
+    <None Include="icon.png" Pack="true" PackagePath="icon.png"/>
+  </ItemGroup>
+
 </Project>
