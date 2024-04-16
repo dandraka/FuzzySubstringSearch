@@ -4,4 +4,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Jim (Dimitrios) Andrakakis</Authors>
+    <Company>dandraka.com</Company>
+    <Description>A string search that allows for mistakes ("fuzzy") that can work for substrings.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/dandraka/FuzzySubstringSearch</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dandraka/FuzzySubstringSearch/</RepositoryUrl>
+    <Copyright>Copyright (c) 2024 Jim (Dimitrios) Andrakakis</Copyright>
+    <PackageIcon>icon.png</PackageIcon>
+    <Version>0.0.1</Version>
+    <PackageReleaseNotes>First version</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTags>string text search substring fuzzy n-grams ngrams bigrams trigrams</PackageTags>
+  </PropertyGroup>
+
 </Project>
