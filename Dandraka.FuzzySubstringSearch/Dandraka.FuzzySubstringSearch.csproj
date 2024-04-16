@@ -23,7 +23,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="$(ProjectDir)LICENSE" Pack="true" PackagePath="LICENSE.txt"/>
+    <None Include="$(ProjectDir)..\LICENSE" Pack="true" PackagePath="LICENSE.txt"/>
     <None Include="$(ProjectDir)..\icon.png" Pack="true" PackagePath="icon.png"/>
     <None Include="$(ProjectDir)..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
