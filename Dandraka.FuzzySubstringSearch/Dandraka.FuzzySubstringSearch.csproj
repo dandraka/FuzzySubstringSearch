@@ -16,7 +16,7 @@
     <Copyright>Copyright (c) 2024 Jim (Dimitrios) Andrakakis</Copyright>
     <PackageIcon>icon.png</PackageIcon>
     <Version>0.0.1</Version>
-    <PackageReleaseNotes>First version</PackageReleaseNotes>
+    <PackageReleaseNotes>First working+tested version</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageTags>string text search substring fuzzy n-grams ngrams bigrams trigrams</PackageTags>
   </PropertyGroup>
