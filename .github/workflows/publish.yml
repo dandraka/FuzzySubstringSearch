@@ -22,10 +22,10 @@ jobs:
       # Publish
       - name: publish on version change
         id: publish_nuget
-        uses: rohith/publish-nuget@v2
+        uses: brandedoutcast/publish-nuget@v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: FuzzySubstringSearch/Dandraka.FuzzySubstringSearch/Dandraka.FuzzySubstringSearch.csproj
+          PROJECT_FILE_PATH: Dandraka.FuzzySubstringSearch/Dandraka.FuzzySubstringSearch.csproj
           
           # NuGet package id, used for version detection & defaults to project name
           # PACKAGE_NAME: Core
