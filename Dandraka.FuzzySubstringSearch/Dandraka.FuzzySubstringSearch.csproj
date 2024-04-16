@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <PackageId>Dandraka.FuzzySubstringSearch</PackageId>
     <Authors>Jim (Dimitrios) Andrakakis</Authors>
     <Company>dandraka.com</Company>
     <Description>A string search that allows for mistakes ("fuzzy") that can work for substrings.</Description>
