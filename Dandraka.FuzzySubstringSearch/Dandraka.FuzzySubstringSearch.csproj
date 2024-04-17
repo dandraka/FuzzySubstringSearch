@@ -7,20 +7,21 @@
 
   <PropertyGroup>
     <PackageId>Dandraka.FuzzySubstringSearch</PackageId>
-	<Version>1.0.1</Version>	  
+	<Version>1.0.2</Version>	  
     <Authors>Jim (Dimitrios) Andrakakis</Authors>
     <Company>dandraka.com</Company>
 	<Copyright>Copyright (c) 2024 Jim (Dimitrios) Andrakakis</Copyright>
 	<Description>A .net string search library that allows for mistakes ("fuzzy") that can work for substrings. Produces a 0-100 match number.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/dandraka/FuzzySubstringSearch</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dandraka/FuzzySubstringSearch/</RepositoryUrl>    
     <PackageReleaseNotes>Completed README with examples.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageTags>string text search substring fuzzy n-grams ngrams bigrams trigrams</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>    
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
