@@ -12,10 +12,10 @@ public void FuzzySubstringSearchExample
 	var g = new LookingGlass(true); // true = sequential mode on
 
 	int m1 = g.NGram("I'm wearing hedphones now", "headphones", 2);
-	Console.WriteLine; // 78%
+	Console.WriteLine(m1.ToString()); // 78
 
 	int m2 = g.NGram(@"C:\Users\myuser\OneDrive\LookingGlass Project Team", "MYUSER");
-	Console.WriteLine; // 100%
+	Console.WriteLine(m2.ToString()); // 100
 }
 ```
 
@@ -92,7 +92,7 @@ public class LookingGlass
 Creates a LookingGlass instance with sequential search.
 
 ```csharp
-public LookingGlass
+public LookingGlass()
 ```
 
 ## See Also
@@ -107,7 +107,7 @@ public LookingGlass
 Creates a LookingGlass instance.
 
 ```csharp
-public LookingGlass
+public LookingGlass(bool isSequential)
 ```
 
 | parameter | description |
@@ -124,18 +124,20 @@ public LookingGlass
 Performs an N-gram case-insensitive search.
 
 ```csharp
-public int NGram
+public int NGram(string TargetString, string SearchString, int NGramSize)
 ```
 
 | parameter | description |
 | --- | --- |
-| TargetString | The string in which search is being performed. |
-| SearchString | The string sought within the target string. |
-| NGramSize | The n-gram size, usually 2 or 3. Default is 3. |
+| TargetString | The string in which search is being performed. Must not be null or empty. |
+| SearchString | The string sought within the target string. Must not be null or empty. |
+| NGramSize | The n-gram size, usually 2 or 3. Default is 3. Must be less or equal than the minimum of TargetString and SearchString length. |
 
 ## Return Value
 
-A number between 0 and 100. 0 Means no part of the search string was found. 100 means that the search string was found verbatim.
+An integer number between 0 and 100.
+Zero means that no part of the search string was found.
+100 means that the search string was found verbatim.
 
 ## See Also
 

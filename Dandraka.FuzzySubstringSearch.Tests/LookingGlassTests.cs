@@ -72,6 +72,9 @@ public class LookingGlassTests
 
         int mNS = gNS.NGram("ball center", "cell", 2);
         mNS.Should().Be(67, "the 2-gram non-sequential overlap is 66.66%");
+
+        int mNS2 = gNS.NGram("a ball inside a basket", "basketball", 2);
+        mNS2.Should().Be(89, "all word parts exist except tb therefore overlap is 89%");
     }
 
     [Fact]

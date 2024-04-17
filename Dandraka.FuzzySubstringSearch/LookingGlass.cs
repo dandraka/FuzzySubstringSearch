@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace Dandraka.FuzzySubstringSearch;
 
 /// <summary>
@@ -88,7 +86,7 @@ public class LookingGlass
                     break;
                 }
             }
-
+        
             if (r >= sNgramsCount)
             {
                 // word found, stop looking further
