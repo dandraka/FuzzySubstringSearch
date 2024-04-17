@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -7,25 +7,32 @@
 
   <PropertyGroup>
     <PackageId>Dandraka.FuzzySubstringSearch</PackageId>
+	<Version>1.0.1</Version>	  
     <Authors>Jim (Dimitrios) Andrakakis</Authors>
     <Company>dandraka.com</Company>
-    <Description>A string search that allows for mistakes ("fuzzy") that can work for substrings.</Description>
+	<Copyright>Copyright (c) 2024 Jim (Dimitrios) Andrakakis</Copyright>
+	<Description>A .net string search library that allows for mistakes ("fuzzy") that can work for substrings. Produces a 0-100 match number.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/dandraka/FuzzySubstringSearch</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/dandraka/FuzzySubstringSearch/</RepositoryUrl>
-    <Copyright>Copyright (c) 2024 Jim (Dimitrios) Andrakakis</Copyright>
-    <PackageIcon>icon.png</PackageIcon>
-    <Version>1.0.0</Version>
-    <PackageReleaseNotes>First working+tested version</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/dandraka/FuzzySubstringSearch/</RepositoryUrl>    
+    <PackageReleaseNotes>Completed README with examples.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageTags>string text search substring fuzzy n-grams ngrams bigrams trigrams</PackageTags>
+	<PackageIcon>icon.png</PackageIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="$(ProjectDir)..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
-    <None Include="$(ProjectDir)..\icon.png" Pack="true" PackagePath="icon.png"/>
-    <None Include="$(ProjectDir)..\README.md" Pack="true" PackagePath="\"/>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>	  
+    <None Include="$(ProjectDir)..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+	<None Include="$(ProjectDir)..\README.md" Pack="true" PackagePath="\" />
+    <None Include="$(ProjectDir)..\icon.png" Pack="true" PackagePath="icon.png" />
+	<None Include="$(ProjectDir)..\icon.ico" Pack="true" PackagePath="icon.ico" />
   </ItemGroup>
 
 </Project>

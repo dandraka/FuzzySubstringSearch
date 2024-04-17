@@ -2,19 +2,37 @@ using System.Diagnostics;
 
 namespace Dandraka.FuzzySubstringSearch;
 
+/// <summary>
+/// N-gram case-insensitive text search.
+/// </summary>
 public class LookingGlass
 {
     private bool isSequential;
+
+    /// <summary>
+    /// Creates a LookingGlass instance with sequential search.
+    /// </summary>
     public LookingGlass()
     {
         this.isSequential = true;
     }
 
+    /// <summary>
+    /// Creates a LookingGlass instance.
+    /// </summary>
+    /// <param name="isSequential">Defines if search is limited to sequencial mode.</param>
     public LookingGlass(bool isSequential)
     {
         this.isSequential = isSequential;
     }
 
+    /// <summary>
+    /// Performs an N-gram case-insensitive search.
+    /// </summary>
+    /// <param name="TargetString">The string in which search is being performed.</param>
+    /// <param name="SearchString">The string sought within the target string.</param>
+    /// <param name="NGramSize">The n-gram size, usually 2 or 3. Default is 3.</param>
+    /// <returns>A number between 0 and 100. 0 Means no part of the search string was found. 100 means that the search string was found verbatim.</returns>
     public int NGram(string TargetString, string SearchString, int NGramSize = 3)
     {
         string t = TargetString.ToLowerInvariant();
