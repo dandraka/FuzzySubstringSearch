@@ -1,27 +1,27 @@
 # FuzzySubstringSearch
 Implements n-gram matching in a string, returning a match percentage in the range of 0-100.
+Search is always case-insensitive.
 
 ## Example:
 
 ```
 using Dandraka.FuzzySubstringSearch;
 
-public void PrintXmlContents1
+public void FuzzySubstringSearchExample
 {
-	var g = new LookingGlass;
+	var g = new LookingGlass(true); // true = sequential mode on
 
-	int m1 = g.NGram;
+	int m1 = g.NGram("I'm wearing hedphones now", "headphones", 2);
 	Console.WriteLine; // 78%
 
-	int m2 = g.NGram;
+	int m2 = g.NGram(@"C:\Users\myuser\OneDrive\LookingGlass Project Team", "MYUSER");
 	Console.WriteLine; // 100%
 }
 ```
 
-## What does 'Sequential Search' mean?
+## What does 'Sequential Mode' mean?
 
-Sequential search, in this context, means that as soon as a part of search string is found, 
-subsequect searches look only for the rest of the search string.
+Sequential mode, in this context, means that as soon as a part of search string is found, subsequect searches look only for the rest of the search string.
 
 For example, when sequential is true, this is what happens when searching for 'cell' in target 'ball center' with 2-grams:
 
@@ -32,8 +32,8 @@ The word 'cell' has 3 x 2-grams: ce, el, ll.
 | ba | No |
 | al | No |
 | ll  | Yes: matches ll, the 3rd 2-gram. |
-| l | No |
-| c | No |
+| l[space] | No |
+| [space]c | No |
 | ce | No: it could match ce but this is the 1st 2-gram, we've already found the 3rd and sequential is on. |
 | en | No |
 | nt | No |
@@ -49,8 +49,8 @@ When sequential is false this restriction does not apply:
 | ba | No |
 | al | No |
 | ll  | Yes: matches ll, the 3rd 2-gram. |
-| l | No |
-| c | No |
+| l[space] | No |
+| [space]c | No |
 | ce | Yes: matches ce, the 1st 2-gram. |
 | en | No |
 | nt | No |
