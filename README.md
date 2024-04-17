@@ -65,7 +65,7 @@ So the result is 2 matches / 3 total = 67%.
 
 | public type | description |
 | --- | --- |
-| class [LookingGlass] | N-gram case-insensitive text search. |
+| class [LookingGlass] | N-gram case-insensitive text search. |
 
 # LookingGlass class
 
@@ -85,7 +85,7 @@ public class LookingGlass
 
 ## See Also
 
-* namespace [Dandraka.FuzzySubstringSearch]
+* namespace [Dandraka.FuzzySubstringSearch]
 
 # LookingGlass constructor 
 
@@ -97,8 +97,8 @@ public LookingGlass
 
 ## See Also
 
-* class [LookingGlass]
-* namespace [Dandraka.FuzzySubstringSearch]
+* class [LookingGlass]
+* namespace [Dandraka.FuzzySubstringSearch]
 
 ---
 
@@ -116,8 +116,8 @@ public LookingGlass
 
 ## See Also
 
-* class [LookingGlass]
-* namespace [Dandraka.FuzzySubstringSearch]
+* class [LookingGlass]
+* namespace [Dandraka.FuzzySubstringSearch]
 
 # LookingGlass.NGram method
 
@@ -139,5 +139,5 @@ A number between 0 and 100. 0 Means no part of the search string was found. 100 
 
 ## See Also
 
-* class [LookingGlass]
-* namespace [Dandraka.FuzzySubstringSearch]
+* class [LookingGlass]
+* namespace [Dandraka.FuzzySubstringSearch]
