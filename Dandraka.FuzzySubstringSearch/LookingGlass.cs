@@ -35,6 +35,17 @@ public class LookingGlass
     /// <returns>A number between 0 and 100. 0 Means no part of the search string was found. 100 means that the search string was found verbatim.</returns>
     public int NGram(string TargetString, string SearchString, int NGramSize = 3)
     {
+        // sanity checks
+        if (string.IsNullOrEmpty(TargetString) || string.IsNullOrEmpty(SearchString))
+        {
+            throw new InvalidInputException("Neither SearchString nor TargetString can be empty.");
+        }
+
+        if (NGramSize < 1 || NGramSize > SearchString.Length || NGramSize > TargetString.Length)
+        {
+            throw new InvalidNValueException(NGramSize);
+        }
+
         string t = TargetString.ToLowerInvariant();
         string s = SearchString.ToLowerInvariant();
         

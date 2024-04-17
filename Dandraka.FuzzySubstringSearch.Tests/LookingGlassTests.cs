@@ -59,5 +59,104 @@ public class LookingGlassTests
 
         int m = g.NGram("the projekt XYZ was finished last year", "project XYZ");
         m.Should().Be(67, "the 3-gram overlap is 66.67%");
-    }        
+    }
+
+    [Fact]
+    public void T07_NonSequentialSearch()
+    {
+        var gS = new LookingGlass(true);
+        var gNS = new LookingGlass(false);
+
+        int mS = gS.NGram("ball center", "cell", 2);
+        mS.Should().Be(33, "the 2-gram sequential overlap is 33.33%");
+
+        int mNS = gNS.NGram("ball center", "cell", 2);
+        mNS.Should().Be(67, "the 2-gram non-sequential overlap is 66.66%");
+    }
+
+    [Fact]
+    public void T08_InvalidNValue()
+    {
+        var g = new LookingGlass();
+
+        try
+        {
+            int m = g.NGram("the projekt XYZ was finished last year", "XYZ", 4);
+            Assert.Fail("Operation should throw InvalidNValueException");
+        }
+        catch (InvalidNValueException) 
+        { 
+            // pass
+        }
+        catch(Exception)
+        {
+            Assert.Fail("Operation should throw InvalidNValueException");
+        }
+    }
+
+    [Fact]
+    public void T09_InvalidInput()
+    {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
+
+        var g = new LookingGlass();
+
+        try
+        {
+            int m = g.NGram(null, "XYZ", 2);
+            Assert.Fail("Operation should throw InvalidInputException");
+        }
+        catch (InvalidInputException)
+        {
+            // pass
+        }
+        catch (Exception)
+        {
+            Assert.Fail("Operation should throw InvalidInputException");
+        }
+
+        try
+        {
+            int m = g.NGram("", "XYZ", 2);
+            Assert.Fail("Operation should throw InvalidInputException");
+        }
+        catch (InvalidInputException)
+        {
+            // pass
+        }
+        catch (Exception)
+        {
+            Assert.Fail("Operation should throw InvalidInputException");
+        }
+
+        try
+        {
+            int m = g.NGram("XYZ", null, 2);
+            Assert.Fail("Operation should throw InvalidInputException");
+        }
+        catch (InvalidInputException)
+        {
+            // pass
+        }
+        catch (Exception)
+        {
+            Assert.Fail("Operation should throw InvalidInputException");
+        }
+
+        try
+        {
+            int m = g.NGram("XYZ", "", 2);
+            Assert.Fail("Operation should throw InvalidInputException");
+        }
+        catch (InvalidInputException)
+        {
+            // pass
+        }
+        catch (Exception)
+        {
+            Assert.Fail("Operation should throw InvalidInputException");
+        }
+
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
+    }
 }
