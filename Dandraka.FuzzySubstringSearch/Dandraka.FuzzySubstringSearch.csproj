@@ -7,7 +7,7 @@
 
   <PropertyGroup>
     <PackageId>Dandraka.FuzzySubstringSearch</PackageId>
-	<Version>1.0.5</Version>	  
+	<Version>1.0.6</Version>	  
     <Authors>Jim (Dimitrios) Andrakakis</Authors>
     <Company>dandraka.com</Company>
 	<Copyright>Copyright (c) 2024 Jim (Dimitrios) Andrakakis</Copyright>
@@ -17,7 +17,7 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/dandraka/FuzzySubstringSearch</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dandraka/FuzzySubstringSearch/</RepositoryUrl>    
-    <PackageReleaseNotes>Added tests and README with examples.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added tests, dev docs and README with examples.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageTags>string text search substring fuzzy n-grams ngrams bigrams trigrams</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
