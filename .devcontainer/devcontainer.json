@@ -1,0 +1,52 @@
+{
+	"name": "DevContainer for .NET",
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": ".",
+		"args": {
+			"VARIANT": "10.0-noble"
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": false,
+			"installOhMyZsh": false,
+			"upgradePackages": true,
+			"username": "vscode",
+			"uid": "1000",
+			"gid": "1000"
+		}
+	},
+	"overrideFeatureInstallOrder": [
+		"ghcr.io/devcontainers/features/common-utils:2"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"cschleiden.vscode-github-actions",
+				"Fudge.auto-using",
+				"jongrant.csharpsortusings",
+				"kreativ-software.csharpextensions",
+				"bierner.github-markdown-preview",
+				"ms-dotnettools.csharp",
+				"ms-vscode.PowerShell",
+				"ms-vscode.vscode-node-azure-pack",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"fernandoescolar.vscode-solution-explorer",
+				"formulahendry.vscode-dotnet-test-explorer"
+			],
+			"settings": {
+				"terminal.integrated.fontFamily": "'Fira Code', monospace",
+				"editor.minimap.enabled": false,
+				"explorer.sortOrder": "type",
+				"explorer.fileNesting.enabled": true,
+				"explorer.fileNesting.patterns": {
+					"*.bicep": "${capture}.json",
+					"*.razor": "${capture}.razor.css",
+					"*.js": "${capture}.js.map"
+				}
+			}
+		}
+	},
+	"remoteUser": "vscode"
+}
